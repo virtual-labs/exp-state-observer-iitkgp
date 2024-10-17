@@ -594,7 +594,7 @@ function OBSR(){
 			
 			var Qoo= math.matrix([[c11, c12, c13, c14],[c21, c22, c23, c24],[ca11, ca12, ca13, ca14],[ca21, ca22, ca23, ca24]]);
 			
-			document.getElementById('matQo').innerHTML = 'Q<sub>o</sub> =['+ c11+',\t'+c12+',\t'+c13+',\t'+c14+';\t\t'+c21+','+c22+',\t'+c23+',\t'+c24+',\t'+ ca11+',\t'+ca12+',\t'+ca13+',\t'+ca14+';\t\t'+ca21+','+ca22+',\t'+ca23+',\t'+ca24+']'
+			document.getElementById('matQo').innerHTML = 'Q<sub>o</sub> =['+ c11+',\t'+c12+',\t'+c13+',\t'+c14+';\t\t'+c21+','+c22+',\t'+c23+',\t'+c24+';\t'+ ca11+',\t'+ca12+',\t'+ca13+',\t'+ca14+';\t\t'+ca21+','+ca22+',\t'+ca23+',\t'+ca24+']'
 			
 			var DQoo= math.divide(math.round(math.multiply(math.det(Qoo),1000)),1000);
 			console.log(DQoo);
