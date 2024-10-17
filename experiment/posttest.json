@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Q1. What are the Eigen values of the system matrix <img src='./images/poq1.png/>'?",
+      "question": "Q1. What are the Eigen values of the system matrix <img src=./images/poq1.png>?",
       "answers": {
         "a": "10.28, 99.7",
         "b": "100, 10",
@@ -13,7 +13,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Q2. What is the state feedback gain matrix <img src='./images/poq21.png/>' for the  <img src='./images/poq22.png/>' and desired poles <img src='./images/poq23.png/>' ?",
+      "question": "Q2. What is the state feedback gain matrix <img src=./images/poq21.png> for the  <img src=./images/poq22.png> and desired poles <img src=./images/poq23.png> ?",
       "answers": {
        "a": "<img src=./images/poq2a.png>",
        "b": "<img src=./images/poq2b.png>",
@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Q3. What is the state feedback gain matrix <img src='./images/poq21.png/>' for the given <img src='./images/poq32.png/>' and the desired characteristic equation  <img src='./images/poq33.png/>' ?",
+      "question": "Q3. What is the state feedback gain matrix <img src=./images/poq21.png> for the given <img src=./images/poq32.png> and the desired characteristic equation  <img src=./images/poq33.png> ?",
       "answers": {
         "a": "<img src=./images/poq3a.png>",
         "b": "<img src=./images/poq3b.png>",
@@ -35,7 +35,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Q4.  What is the observer gain matrix  <img src='./images/poq41.png/>' for the given system   <img src='./images/poq42.png/>' and desired poles are   <img src='./images/poq43.png/>' ?",
+      "question": "Q4.  What is the observer gain matrix  <img src=./images/poq41.png> for the given system   <img src=./images/poq42.png> and desired poles are   <img src=./images/poq43.png> ?",
       "answers": {
         "a": "<img src=./images/poq4a.png>",
         "b": "<img src=./images/poq4b.png>",
