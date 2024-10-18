@@ -1,0 +1,63 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1. What is the design goal of the observer?",
+      "answers": {
+        "a": "To improve transient response",
+        "b": "To cancel the steady state error",
+        "c": "To measure all state variable",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2. A device that estimates the state variables is called _____.",
+      "answers": {
+        "a": "State regulator",
+        "b": "State observer",
+        "c": "State tracker",
+        "d": "Pre-compensator"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3. What is the necessary condition for state observer design?",
+      "answers": {
+        "a": "All poles must be lies on the left half of the s plane",
+        "b": "Rank of the controllability matrix should be less than the order of the system",
+        "c": "System should be controllable",
+        "d": "System should be observable"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q4. If the state estimator observes all state variables of the system, it is called _____.",
+      "answers": {
+        "a": "Full order state observer",
+        "b": "Reduced order state observer",
+        "c": "Full order state regulator",
+        "d": "Full order state tracker"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5. Transfer function is only applicable to which of the following?",
+      "answers": {
+        "a": "Linear and Time variant systems",
+        "b": "Linear and Time invariant systems",
+        "c": "MIMO systems",
+        "d": "Non-linear systems"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+	
+	
+  ]
+}
+
