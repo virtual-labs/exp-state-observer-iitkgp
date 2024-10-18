@@ -415,7 +415,25 @@ function CNTR(){
 			   
 			   console.log(K);
 			   
+			   var Padd = math.add(p1,p2,p3,p4,a22);
+			   var P12add = math.add(p12,p13,p14,p23,p24,p34);
+			   var P123add = math.add(p123,p124,p234,p134);
 			   
+			   DCharEq=" Desired characteristic equation from poles\t:";
+			   document.getElementById("DChar_Eq").innerHTML=DCharEq;
+			   document.getElementById('Desired_char').innerHTML = '  \t s<sup>4</sup>\t+('+Padd+')s<sup>3</sup>\t+\t('+P12add+')\t s<sup>2</sup>+\t('+P123add+')\ts+\t('+p1p2p3p4+')\t=\t0';
+			   
+			   var b2b4 = math.divide(math.round(math.multiply(math.multiply(b2,b4),1000)),1000);
+			   var a42b2 = math.divide(math.round(math.multiply(math.multiply(a42,b2),1000)),1000);
+			   var b4a23 = math.divide(math.round(math.multiply(math.multiply(b4,a23),1000)),1000);
+			   var a42a23 = math.divide(math.round(math.multiply(math.multiply(a42,a23),1000)),1000);
+			   var a22b4 = math.divide(math.round(math.multiply(math.multiply(a22,b4),1000)),1000);
+			   var a22a43 = math.divide(math.round(math.multiply(math.multiply(a22,a43),1000)),1000);
+			   var a43b2 = math.divide(math.round(math.multiply(math.multiply(a43,b2),1000)),1000);
+			   
+			   CharEq=" Characteristic equation of the closed loop system\t:";
+			   document.getElementById("Char_Eq").innerHTML=CharEq;
+			   document.getElementById('Closed_loop_char').innerHTML = ' \t s<sup>4</sup>\t+[\t'+ b2+'k<sub>2</sub>\t-\t\t('+a22+')\t]\t s<sup>3</sup>\t+[\t'+b4+'\tk<sub>2</sub>\t-\t('+a43+')\t-\t('+b2b4+'\tk<sub>2</sub>k<sub>4</sub>)+('+a42b2+')\tk<sub>4</sub>\t+\t'+b2+'\tk<sub>1</sub>\t]\ts<sup>2</sup>\t+\t[\t('+b4a23+')\tk<sub>2</sub>\t-\t('+b2b4+')\tk<sub>3</sub>k<sub>2</sub>\t-\t('+a42a23+')\t+\t('+a42b2+')\tk<sub>3</sub>\t-\t('+a22b4+')\tk<sub>3</sub>\t+\t('+a22a43+')\t+\t('+b2b4+')k<sub>2</sub>k<sub>3</sub>\t-\t('+a43b2+')k<sub>2</sub>]\ts\t+\t[\t('+b2b4+')\tk<sub>1</sub>k<sub>3</sub>\t-\t('+a43b2+')k<sub>1</sub>\t=\t('+b4a23+')k<sub>1</sub>\t-\t('+b2b4+')k<sub>1</sub>k<sub>3</sub>]\t=\t0';    
 			   
 			  // Kfb="Feedback gain K = " +K+ "";
 			   
@@ -449,6 +467,10 @@ document.getElementById("Cntrl_Test3").style.display="block";
 }
 
 function GVc(){
+document.getElementById("DChar_Eq").style.display="block";
+document.getElementById("Desired_char").style.display="block";
+document.getElementById("Char_Eq").style.display="block";
+document.getElementById("Closed_loop_char").style.display="block";
 document.getElementById("Feedback_gain_Value_K").style.display="block";
 
 }
@@ -664,6 +686,8 @@ function OBSR(){
 			   document.getElementById("Obsrl_Test6").innerHTML=Obsrl_Test6;
 			   document.getElementById("Obsrl_Test7").innerHTML=Obsrl_Test7;
 			   
+                 
+
 			   var ko11 = math.add(p1,p2,p3,p4,a22);
 			   
 			   console.log(ko11);
@@ -748,7 +772,26 @@ function OBSR(){
 			   document.getElementById("Observer_gain_Value_L23").innerHTML=L23;
 			   document.getElementById("Observer_gain_Value_L24").innerHTML=L24;*/
 			   
-			   document.getElementById('Observer_gain_Value_Ke').innerHTML = ' Observer Gain Values Ke =['+ ko11+',\t'+ko12+',\t'+ko13+',\t'+ko14+';\t'+ko21+',\t'+ko22+',\t'+ko23+',\t'+ko24+']'
+			   var Padd = math.add(p1,p2,p3,p4,a22);
+			   var P12add = math.add(p12,p13,p14,p23,p24,p34);
+			   var P123add = math.add(p123,p124,p234,p134);
+			   
+			   DCharEqO=" Desired characteristic equation from poles\t:";
+			   document.getElementById("DChar_EqO").innerHTML=DCharEqO;
+			   document.getElementById('Desired_charO').innerHTML = '  \t s<sup>4</sup>\t+('+Padd+')s<sup>3</sup>\t+\t('+P12add+')\t s<sup>2</sup>+\t('+P123add+')\ts+\t('+p1p2p3p4+')\t=\t0';			
+			   
+			   var a22a43 = math.divide(math.round(math.multiply(math.multiply(a22,a43),1000)),1000);
+			   var a23a42 = math.divide(math.round(math.multiply(math.multiply(a23,a42),1000)),1000);
+			   
+			   C1CharEqO=" Characteristic equation with C<sub>1</sub>\t:";
+			   document.getElementById("C1Char_EqO").innerHTML=C1CharEqO;
+			   document.getElementById('C1_charO').innerHTML = '  \t s<sup>4</sup>\t+\t[\tk<sub>e1</sub>\t-\t('+a22+')]\ts<sup>3</sup>\t-\t[('+a22+')\tk<sub>e1</sub>\t+\tk<sub>e2</sub>\t+\t('+a43+')]\ts<sup>2</sup>\t+\t[\t('+a22a43+')\t-\t('+a22+')k<sub>e3</sub>\t-\t('+a43+')k<sub>e1</sub>\t-\t('+a23a42+')]\ts\t+\t[\t(('+a22a43+')\t-\t('+a23a42+'))k<sub>e1</sub>\t+\t('+a43+')k<sub>e2</sub>\t-\t('+a23+')k<sub>e4</sub>]\t=\t0';	
+			   
+			   C2CharEqO=" Characteristic equation with C<sub>2</sub>\t:";
+			   document.getElementById("C2Char_EqO").innerHTML=C2CharEqO;
+			   document.getElementById('C2_charO').innerHTML = '  \t s<sup>4</sup>\t+\t[\tk<sub>e3</sub>\t-\t('+a22+')]\ts<sup>3</sup>\t+\t[\tk<sub>e4</sub>\t-\t('+a22+')\tk<sub>e3</sub>\t-\t\t('+a43+')]\ts<sup>2</sup>\t+\t[\t('+a22a43+')\t-\t('+a22+')k<sub>e4</sub>\t-\t('+a42+')k<sub>e2</sub>\t-\t('+a23a42+')]\ts\t]\t=\t0';
+			   
+			   document.getElementById('Observer_gain_Value_Ke').innerHTML = ' Observer Gain Values Ke =['+ ko11+',\t'+ko12+',\t'+ko13+',\t'+ko14+';\t'+ko21+',\t'+ko22+',\t'+ko23+',\t'+ko24+']<sup>T</sup>'
 			   
 			}
 			   else 
@@ -776,6 +819,15 @@ document.getElementById("Obsrl_Test7").style.display="block";
 }
 
 function GVo(){
+document.getElementById("DChar_EqO").style.display="block";
+document.getElementById("Desired_charO").style.display="block";
+
+document.getElementById("C1Char_EqO").style.display="block";
+document.getElementById("C1_charO").style.display="block";
+
+document.getElementById("C2Char_EqO").style.display="block";
+document.getElementById("C2_charO").style.display="block";
+
 document.getElementById("Observer_gain_Value_Ke").style.display="block";
 
 }
