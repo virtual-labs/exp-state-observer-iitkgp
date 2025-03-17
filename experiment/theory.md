@@ -4,7 +4,7 @@ Linear time invariant system may be represented in state space form by the follo
 State equation:
 $$ \dot{x}(t)=A x(t)+B u(t) \tag{1a} $$
 Output equation:
-$$ y(t)= C x(t) u(t) \tag{1b} $$
+$$ y(t)= C x(t) \tag{1b} $$
 <b><i>State feedback design:</i></b> <br>
 A necessary and sufficient condition for arbitrary pole placement is that the pair (A, B) must be controllable.<br/>
 Control input:
