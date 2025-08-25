@@ -804,7 +804,7 @@ function OBSR(){
 			   document.getElementById("C1Char_EqO").innerHTML=C1CharEqO;
 			   document.getElementById('C1_charO').innerHTML = '  \t s<sup>4</sup>\t+\t[\tk<sub>e1</sub>\t-\t('+a22+')]\ts<sup>3</sup>\t+\t[\tk<sub>e2</sub>\t-\t('+a22+')\tk<sub>e1</sub>\t-\t('+a43+')\t]\ts<sup>2</sup>\t+\t[\t('+a23+')k<sub>e3</sub>\t-\t('+a43+')k<sub>e1</sub>\t+\t('+a22a43_a23a42+')]\ts\t+\t[\t('+a22a43_a23a42+')k<sub>e1</sub>\t-\t('+a43+')k<sub>e2</sub>\t+\t('+a23+')k<sub>e4</sub>]\t=\t0';	
 			   
-			   document.getElementById('Observer_gain_Value_Ke').innerHTML = ' Observer Gain Values Ke =['+ ko11+';\t'+ko12+';\t'+ko13+';\t'+ko14+']'
+			   document.getElementById('Observer_gain_Value_Ke').innerHTML = ' Observer Gain Values K<sub>e</sub> =['+ ko11+';\t'+ko12+';\t'+ko13+';\t'+ko14+']'
 			   
 			   /* C2CharEqO=" Characteristic equation with C<sub>2</sub>\t:";
 			   document.getElementById("C2Char_EqO").innerHTML=C2CharEqO;
