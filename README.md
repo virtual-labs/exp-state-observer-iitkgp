@@ -7,7 +7,7 @@
 <b>Discipline | <b>Electrical Engineering 
 :--|:--|
 <b> Lab | <b> Digital Control Laboratory
-<b> Experiment|     <b> State Observer and Controller Design for Pendulum on Cart and Exp 8
+<b> Experiment|     <b> State Observer and Controller Design for an Inverted Pendulum on a Cart and Exp 8
 
 ### About the Experiment 
 
