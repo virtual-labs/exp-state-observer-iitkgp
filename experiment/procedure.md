@@ -55,12 +55,12 @@
 <b>Fig. 6. Run button to calculate the selected design </b>						  
 </div>
 
-7. Click on the 'Rank' or 'Determinant'  or "inference' buttons to get the the Controllability test information and state feedback gain values. 
+7. Click on the 'Rank' or 'Determinant'  or "Inference' buttons to get the the Controllability test information and state feedback gain values. 
 
 <div align="center">
 <img class="img-fluid"  src="./images/Qc.png" alt="">
  
-<b>Fig. 7. Rank, determinant and inference of the Controllability test </b>						  
+<b>Fig. 7. Rank, Determinant and Inference of the Controllability test </b>						  
 </div>
 
 8. Click on 'Design' dropdown button and select the desired option for calculating the design. 
@@ -71,12 +71,12 @@
 <b>Fig. 8. Dropdown button for selecting the required design option </b>				  
 </div>
 
-9. Click on the 'Rank' or 'Determinant'  or "inference' buttons to get the the Observability test information and observer gain values. 
+9. Click on the 'Rank' or 'Determinant'  or "Inference' buttons to get the the Observability test information and observer gain values. 
 
 <div align="center">
 <img class="img-fluid"  src="./images/Qo.png" alt="">
 
-<b>Fig. 9. Rank, determinant and inference of the Observability test </b>						  
+<b>Fig. 9. Rank, Determinant and Inference of the Observability test </b>						  
 </div>
 
 10. Click on 'Clear' button to enter the new parameter values of the system. 
