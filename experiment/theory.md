@@ -1,7 +1,9 @@
 # Theory
 
 Linear time invariant system may be represented in state space form by the following equations:
+
 State equation:
+
 $$ \dot{x}(t)=A x(t)+B u(t) \tag{1a} $$
 Output equation:
 $$ y(t)= C x(t) \tag{1b} $$
@@ -31,7 +33,10 @@ The mathematical model of the observer is basically the same as that of the plan
 The estimation error or observation error is the difference between the measured output and the estimated output. The initial error is the difference between the initial state and the initial estimated state.
 The mathematical model of the observer:
 $$ \dot{\tilde{x}}(t)=A \tilde{x}(t)+B u(t) + K_e (y - C \tilde {x}(t)) \tag{5} $$
-$$ where, \tilde {x}(t) \ is \ estimated \ state \ vector, C \tilde{x}(t)\ is \ estimated \ output \ and \ K_e \ is \ an \ observer \ gain \ matrix. $$
+
+where,
+
+$$  \tilde {x}(t) \ is \ estimated \ state \ vector, C \tilde{x}(t)\ is \ estimated \ output \ and \ K_e \ is \ an \ observer \ gain \ matrix. $$
 From (1) and (5), the observer error equation is,
 $$ \dot{x}(t) - \dot{\tilde{x}}(t)= (A x(t) + B u(t) ) - ( A \tilde{x}(t)+B u(t) + K_e (y - C \tilde {x}(t)))  $$
 $$ \dot{x}(t) - \dot{\tilde{x}}(t)= (A x(t) + B u(t) ) -  A \tilde{x}(t) - B u(t) - K_e ( C x(t) - C \tilde {x}(t)))  $$
