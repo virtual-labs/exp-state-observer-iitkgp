@@ -71,10 +71,10 @@ function system(){
 			
 			
 			
-			document.getElementById('matA').innerHTML = ' A =['+ a11+',\t'+a12+',\t'+a13+',\t'+a14+';\t\t'+a21+','+a22+',\t'+a23+',\t'+a24+';\t\t'+a31+',\t'+a32+',\t'+a33+',\t'+a34+';\t\t'+a41+',\t'+a42+',\t'+a43+',\t'+a44+']';
-			document.getElementById('matB').innerHTML = ' B =['+ b1+';\t\t'+b2+';\t\t'+b3+';\t'+b4+']';
-			document.getElementById('matC').innerHTML = ' C =['+ c11+',\t'+c12+',\t'+c13+',\t'+c14+';\t\t'+c21+','+c22+',\t'+c23+',\t'+c24+']';
-			document.getElementById('matD').innerHTML = ' D =['+ d11+';\t\t'+d21+']';
+			document.getElementById('matA').innerHTML = '<span style="font-family:Bodoni MT;font-style:italic;font-size:18px"> A</span> =['+ a11+',\t'+a12+',\t'+a13+',\t'+a14+';\t\t'+a21+','+a22+',\t'+a23+',\t'+a24+';\t\t'+a31+',\t'+a32+',\t'+a33+',\t'+a34+';\t\t'+a41+',\t'+a42+',\t'+a43+',\t'+a44+']';
+			document.getElementById('matB').innerHTML = '<span style="font-family:Bodoni MT;font-style:italic;font-size:18px"> B</span> =['+ b1+';\t\t'+b2+';\t\t'+b3+';\t'+b4+']';
+			document.getElementById('matC').innerHTML = '<span style="font-family:Bodoni MT;font-style:italic;font-size:18px"> C</span> =['+ c11+',\t'+c12+',\t'+c13+',\t'+c14+';\t\t'+c21+','+c22+',\t'+c23+',\t'+c24+']';
+			document.getElementById('matD').innerHTML = '<span style="font-family:Bodoni MT;font-style:italic;font-size:18px"> D </span>=['+ d11+';\t\t'+d21+']';
 			
 			//outputText1=" G(s)= ["+b0+"s\u00B2+("+b1+")s+("+b2+ ")] / [" +a0+"s<sup>2</sup>+("+a1+")s+("+a2+ ")]";
 			
@@ -317,10 +317,10 @@ function CNTR(){
 			var AAB= math.matrix([aab1, aab2, aab3, aab4]);
 			var AAAB= math.matrix([aaab1, aaab2, aaab3, aaab4]);
 			
-			document.getElementById('matQcB').innerHTML = 'B ='+ B;
-			document.getElementById('matQcAB').innerHTML = ' AB ='+ AB;
-			document.getElementById('matQcAAB').innerHTML = ' A<sup>2</sup>B ='+ AAB;
-			document.getElementById('matQcAAAB').innerHTML = ' A<sup>3</sup>B ='+ AAAB;
+			document.getElementById('matQcB').innerHTML = '<span style="font-family:Bodoni MT;font-style:italic;font-size:18px">B</span> ='+ B;
+			document.getElementById('matQcAB').innerHTML = ' <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">AB</span> ='+ AB;
+			document.getElementById('matQcAAB').innerHTML = ' <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">A<sup>2</sup>B</span> ='+ AAB;
+			document.getElementById('matQcAAAB').innerHTML = ' <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">A<sup>3</sup>B</span> ='+ AAAB;
 			
 			//var Qc1= math.matrix([[0, 1.818, -0.331, 12.209], [1.818, -0.331, 12.209, -4.433], [0, 4.545, -0.827, 141.873], [4.545, -0.827, 141.873, -31.349]]);
 			//var DQc1=math.det(Qc1);
@@ -328,7 +328,7 @@ function CNTR(){
 			
 			var Qc= math.matrix([[b1, ab1, aab1, aaab1],[b2, ab2, aab2, aaab2],[b3, ab3, aab3, aaab3],[b4, ab4, aab4, aaab4]]);
 			
-			document.getElementById('matQc').innerHTML = ' Q<sub>c</sub> =['+ b1+',\t'+ab1+',\t'+aab1+',\t'+aaab1+';\t\t'+b2+','+ab2+',\t'+aab2+',\t'+aaab2+';\t\t'+b3+',\t'+ab3+',\t'+aab3+',\t'+aaab3+';\t\t'+b4+',\t'+ab4+',\t'+aab4+',\t'+aaab4+']'
+			document.getElementById('matQc').innerHTML = ' <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">Q<sub>c</sub></span> =['+ b1+',\t'+ab1+',\t'+aab1+',\t'+aaab1+';\t\t'+b2+','+ab2+',\t'+aab2+',\t'+aaab2+';\t\t'+b3+',\t'+ab3+',\t'+aab3+',\t'+aaab3+';\t\t'+b4+',\t'+ab4+',\t'+aab4+',\t'+aaab4+']'
 			
 			var DQc= math.divide(math.round(math.multiply(math.det(Qc),1000)),1000);
 			console.log(DQc);
@@ -336,8 +336,8 @@ function CNTR(){
 			//DQc=0;
 			
 			if (DQc!=0)
-			{  Cntrl_Test1=" Rank of Q<sub>c</sub> = Order of A = n = 4";			   
-			   Cntrl_Test2="Determinent of Q<sub>c</sub> = " +DQc+ "";				    
+			{  Cntrl_Test1=" Rank is 4";			   
+			   Cntrl_Test2="Determinent is " +DQc+ "";				    
 			   Cntrl_Test3=" System is completely controllable";
 			   document.getElementById("Cntrl_Test1").innerHTML=Cntrl_Test1;
 			   document.getElementById("Cntrl_Test2").innerHTML=Cntrl_Test2;
@@ -460,8 +460,8 @@ function CNTR(){
 			   
 			}
 			   else 
-			   {   Cntrl_Test1=" Rank of Q<sub>c</sub> < Order of A = n = 4";
-		           Cntrl_Test2="Determinent of Q<sub>c</sub> = " +DQc+ "";		
+			   {   Cntrl_Test1=" Rank < n = 4";
+		           Cntrl_Test2="Determinent is" +DQc+ "";		
 			       Cntrl_Test3=" System is not controllable";
 			       document.getElementById("Cntrl_Test1").innerHTML=Cntrl_Test1;
 				   document.getElementById("Cntrl_Test2").innerHTML=Cntrl_Test2;
@@ -631,7 +631,7 @@ function OBSR(){
 			
 			var Qoo= math.matrix([[c11, c12, c13, c14],[c21, c22, c23, c24],[ca11, ca12, ca13, ca14],[ca21, ca22, ca23, ca24]]);
 			
-			document.getElementById('matQo').innerHTML = 'Q<sub>o</sub> =['+ c11+',\t'+c12+',\t'+c13+',\t'+c14+';\t\t'+c21+','+c22+',\t'+c23+',\t'+c24+';\t'+ ca11+',\t'+ca12+',\t'+ca13+',\t'+ca14+';\t\t'+ca21+','+ca22+',\t'+ca23+',\t'+ca24+']'
+			document.getElementById('matQo').innerHTML = '<span style="font-family:Bodoni MT;font-style:italic;font-size:18px">Q<sub>o</sub></span> =['+ c11+',\t'+c12+',\t'+c13+',\t'+c14+';\t\t'+c21+','+c22+',\t'+c23+',\t'+c24+';\t'+ ca11+',\t'+ca12+',\t'+ca13+',\t'+ca14+';\t\t'+ca21+','+ca22+',\t'+ca23+',\t'+ca24+']'
 			
 			var DQoo= math.divide(math.round(math.multiply(math.det(Qoo),1000)),1000);
 			console.log(DQoo);
@@ -662,10 +662,10 @@ function OBSR(){
 			
 			console.log(Qo3);
 			
-			document.getElementById('matQoC').innerHTML = ' C =['+ c11+',\t'+c12+',\t'+c13+',\t'+c14+';\t\t'+c21+','+c22+',\t'+c23+',\t'+c24+']'
-			document.getElementById('matQoCA').innerHTML = ' CA =['+ ca11+',\t'+ca12+',\t'+ca13+',\t'+ca14+';\t\t'+ca21+','+ca22+',\t'+ca23+',\t'+ca24+']'
-			document.getElementById('matQoCAA').innerHTML = ' CA<sup>2</sup> =['+ caa11+',\t'+caa12+',\t'+caa13+',\t'+caa14+';\t\t'+caa21+','+caa22+',\t'+caa23+',\t'+caa24+']'
-			document.getElementById('matQoCAAA').innerHTML = ' CA<sup>3</sup> =['+ caaa11+',\t'+caaa12+',\t'+caaa13+',\t'+caaa14+';\t\t'+caaa21+','+caaa22+',\t'+caaa23+',\t'+caaa24+']'
+			document.getElementById('matQoC').innerHTML = ' <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">C</span> =['+ c11+',\t'+c12+',\t'+c13+',\t'+c14+';\t\t'+c21+','+c22+',\t'+c23+',\t'+c24+']'
+			document.getElementById('matQoCA').innerHTML = ' <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">CA</span> =['+ ca11+',\t'+ca12+',\t'+ca13+',\t'+ca14+';\t\t'+ca21+','+ca22+',\t'+ca23+',\t'+ca24+']'
+			document.getElementById('matQoCAA').innerHTML = ' <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">CA<sup>2</sup></span> =['+ caa11+',\t'+caa12+',\t'+caa13+',\t'+caa14+';\t\t'+caa21+','+caa22+',\t'+caa23+',\t'+caa24+']'
+			document.getElementById('matQoCAAA').innerHTML = ' <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">CA<sup>3</sup></span> =['+ caaa11+',\t'+caaa12+',\t'+caaa13+',\t'+caaa14+';\t\t'+caaa21+','+caaa22+',\t'+caaa23+',\t'+caaa24+']'
 			
 		/*	if (DQo1!=0)
 			{  Obsrl_Test1=" Rank of Q<sub>o1</sub> = Order of A = n = 4";
@@ -694,8 +694,8 @@ function OBSR(){
 			   }
 			   */
 			   if (DQoo!=0)
-			{  Obsrl_Test5=" Rank of Q<sub>o</sub> = Order of A = n = 4";
-			   Obsrl_Test6="Determinent of Q<sub>o</sub> = " +DQoo+ "";	
+			{  Obsrl_Test5=" Rank is 4";
+			   Obsrl_Test6="Determinent is" +DQoo+ "";	
 			   Obsrl_Test7=" System is completely observable";
 			   document.getElementById("Obsrl_Test5").innerHTML=Obsrl_Test5;
 			   document.getElementById("Obsrl_Test6").innerHTML=Obsrl_Test6;
@@ -814,8 +814,8 @@ function OBSR(){
 			    */
 			}
 			   else 
-			   {   Obsrl_Test5=" Rank of Q<sub>o</sub> < Order of A = n = 4";
-		           Obsrl_Test6="Determinent of Q<sub>o</sub> = " +DQoo+ "";	
+			   {   Obsrl_Test5=" Rank < n = 4";
+		           Obsrl_Test6="Determinent is" +DQoo+ "";	
 			       Obsrl_Test7=" System is not observable";
 			       document.getElementById("Obsrl_Test5").innerHTML=Obsrl_Test5;
 				   document.getElementById("Obsrl_Test6").innerHTML=Obsrl_Test6;

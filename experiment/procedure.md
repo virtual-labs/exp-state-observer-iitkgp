@@ -8,22 +8,18 @@
 <div align="center">
 <img class="img-fluid"  src="./images/1.png" alt="">
 
-<b>Fig. 1. Parameter values of the Inverted pendulum on cart</b>						  
+<b>Fig. 1. Parameter values of the Inverted Pendulum on Cart</b>						  
 </div>
 
 2. Click on 'State Space Model' button to get the state space form of the system.
 
 <div align="center">
 <img class="img-fluid"  src="./images/2.png" alt="">           
-</div>
-
-<div align="center">
-<img class="img-fluid"  src="./images/Prod_2_1.png" alt="">
 
 <b>Fig. 2. Button to get the state Space form of the system</b>							  
 </div>
                     
-3. Click on ' Enter the pole Location' button to enter the desired pole values. 
+3. Click on ' Enter the Pole Location' button to enter the desired pole values. 
 
 <div align="center">
 <img class="img-fluid"  src="./images/4.png" alt="">
