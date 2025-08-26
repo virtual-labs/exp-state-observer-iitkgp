@@ -129,8 +129,7 @@
         
     </div><!--First Container under body tag end-->
     
-
-	
+    
     <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
       <div class="row"><!--First row under 3rd container start-->
         <div class="col-md-1"></div><!--First col under 3rd container start& end-->
@@ -141,7 +140,7 @@
   
 					  <li> Click on 'State Space Model' button to get the state space form of the system. </li><br/>
 					  
-					  <li> Click on ' Enter the pole Location' button to enter desired pole values. </li><br/> 
+					  <li> Click on ' Enter the Pole Location' button to enter desired pole values. </li><br/> 
 					 
 					 <li> Enter the desired negative pole values. </li><br/> 
 					 
@@ -185,11 +184,11 @@
 			Enter the values of the following quantities: <br/><br/>
 			<!--<img class = "img-fluid" src="./images/Continuous_System.png" class="img-fluid" > <br/></br>-->
 			
-			<span style="position:absolute;left:33%">Mass of the cart :  M (kg)</span> <span style="position:absolute;left:63%;text-align:center">= <input type="number" id="M1" min="0.1" value="0.5" max="1" step="0.05"  ></span><br/></br>
-			<span style="position:absolute;left:33%">Mass of the pendulum : m (kg)</span><span style="position:absolute;left:63%;text-align:center"> = <input type="number" id="m1" min="0.1" value="0.2" max="1" step="0.05"  ></span><br/></br>
-			<span style="position:absolute;left:33%">Coefficient of friction for cart :  b (N/m/sec)</span> <span style="position:absolute;left:63%;text-align:center">= <input type="number" id="bc" min="0.01" value="0.1" max="1" step="0.01"  ></span><br/></br>
-            <span style="position:absolute;left:33%">Length to pendulum center of mass : l (m)</span> <span style="position:absolute;left:63%;text-align:center">= <input type="number" id="l1" min="0.1" value="0.3" max="1" step="0.05" ></span><br/></br>	
-            <span style="position:absolute;left:33%">Mass moment of inertia of the pendulum : I (kg.m^2)</span> <span style="position:absolute;left:63%;text-align:center">= <input type="number" id="I1" min="0.001" value="0.006" max="1" step="0.001" ></span><br/></br>
+			<span style="position:absolute;left:33%">Mass of the cart :  <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">M</span> (kg)</span> <span style="position:absolute;left:63%;text-align:center">= <input type="number" id="M1" min="0.1" value="0.5" max="1" step="0.05"  ></span><br/></br>
+			<span style="position:absolute;left:33%">Mass of the pendulum : <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">m</span> (kg)</span><span style="position:absolute;left:63%;text-align:center"> = <input type="number" id="m1" min="0.1" value="0.2" max="1" step="0.05"  ></span><br/></br>
+			<span style="position:absolute;left:33%">Coefficient of friction for cart :  <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">b</span> (N/m/sec)</span> <span style="position:absolute;left:63%;text-align:center">= <input type="number" id="bc" min="0.01" value="0.1" max="1" step="0.01"  ></span><br/></br>
+            <span style="position:absolute;left:33%">Length to pendulum center of mass : <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">l</span> (m)</span> <span style="position:absolute;left:63%;text-align:center">= <input type="number" id="l1" min="0.1" value="0.3" max="1" step="0.05" ></span><br/></br>	
+            <span style="position:absolute;left:33%">Mass moment of inertia of the pendulum : <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">I</span> (kg.m^2)</span> <span style="position:absolute;left:63%;text-align:center">= <input type="number" id="I1" min="0.001" value="0.006" max="1" step="0.001" ></span><br/></br>
             
 			
 			
@@ -254,7 +253,7 @@
 			<p id="output_text2"/>-->
 			
 			<br><br>
-			<button class="btn btn-success" id ="run1" onclick="EP()" style="visibility:hidden">Enter the desired pole location</button>				
+			<button class="btn btn-success" id ="run1" onclick="EP()" style="visibility:hidden">Enter the Pole Location</button>				
 			
 			<div id="tfbody11" class="card border-0" style="display:none; width:100%;background-color:none">
 			<br/><br/>
@@ -351,15 +350,15 @@
 			
 			$$ Q_c = [B, \ AB, \ A^2B, \ A^3B] $$
 			
-			<span class="card-text" id="matQcB" ></span><br/<br/>
-			<span class="card-text" id="matQcAB" ></span><br/<br/>
-			<span class="card-text" id="matQcAAB" ></span><br/<br/>
-			<span class="card-text" id="matQcAAAB" ></span><br/<br/><br/>
-			<span class="card-text" id="matQc" ></span><br/<br/>
+			<span class="card-text" id="matQcB" ></span><br/><br/>
+			<span class="card-text" id="matQcAB" ></span><br/><br/>
+			<span class="card-text" id="matQcAAB" ></span><br/><br/>
+			<span class="card-text" id="matQcAAAB" ></span><br/><br/><br/>
+			<span class="card-text" id="matQc" ></span><br/><br/>
 			 
-			<button class="btn btn-success" onclick="showRank()">Rank of Qc</button>
+			<button class="btn btn-success" onclick="showRank()">Rank of <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">Q<sub>c</sub></span></button>
 				<span id="Cntrl_Test1" style="display:none"></span><br/><br/>
-			<button class="btn btn-success" onclick="showDetQc()">Determinant of Qc</button>
+			<button class="btn btn-success" onclick="showDetQc()">Determinant of <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">Q<sub>c</sub></span></button>
 			    <span id="Cntrl_Test2" style="display:none"></span><br/><br/>
 			<button class="btn btn-success" onclick="showinfo()">Inference</button>
 				<span id="Cntrl_Test3" style="display:none"></span><br/><br/>
@@ -393,15 +392,15 @@
 			$$ Q_{o2} = [c_2 \ c_2A \ c_2A^2 \ c_2A^3]^T $$-->
 			$$ Q_o = [C, \ CA, \ CA^2, \ CA^3]^T $$
 			
-			<span class="card-text" id="matQoC" ></span><br/<br/>
-			<span class="card-text" id="matQoCA" ></span><br/<br/>
-			<span class="card-text" id="matQoCAA" ></span><br/<br/>
-			<span class="card-text" id="matQoCAAA" ></span><br/<br/><br/>
-			<span class="card-text" id="matQo" ></span><br/<br/>
+			<span class="card-text" id="matQoC" ></span><br/><br/>
+			<span class="card-text" id="matQoCA" ></span><br/><br/>
+			<span class="card-text" id="matQoCAA" ></span><br/><br/>
+			<span class="card-text" id="matQoCAAA" ></span><br/><br/><br/>
+			<span class="card-text" id="matQo" ></span><br/><br/>
 			 
-			<button class="btn btn-success" onclick="showRankQo()">Rank of Qo</button>
+			<button class="btn btn-success" onclick="showRankQo()">Rank of <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">Q<sub>o</sub></span></button>
 				<span id="Obsrl_Test5" style="display:none"></span><br/><br/>
-			<button class="btn btn-success" onclick="showDetQo()">Determinant of Qo</button>
+			<button class="btn btn-success" onclick="showDetQo()">Determinant of <span style="font-family:Bodoni MT;font-style:italic;font-size:18px">Q<sub>o</sub></span></button>
 			    <span id="Obsrl_Test6" style="display:none"></span><br/><br/>
 			<button class="btn btn-success" onclick="showinfoQo()">Inference</button>
 				<span id="Obsrl_Test7" style="display:none"></span><br/><br/>
