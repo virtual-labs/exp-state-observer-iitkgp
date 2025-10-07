@@ -6,7 +6,7 @@
       "answers": {
         "a": "To improve transient response",
         "b": "To cancel the steady state error",
-        "c": "To measure all state variable",
+        "c": "To estimate unmeasured states",
         "d": "None of the above"
       },
       "correctAnswer": "c",
@@ -26,7 +26,7 @@
     {
       "question": "Q3. What is the necessary condition for state observer design?",
       "answers": {
-        "a": "All poles must be lies on the left half of the s plane",
+        "a": "All poles must be lie on the left half of the s plane",
         "b": "Rank of the controllability matrix should be less than the order of the system",
         "c": "System should be controllable",
         "d": "System should be observable"
@@ -60,4 +60,3 @@
 	
   ]
 }
-
