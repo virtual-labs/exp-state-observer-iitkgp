@@ -7,4 +7,4 @@
 								
 #### Video Lectures
 
-<a href="https://nptel.ac.in/courses/108103008" target="_blank">Click here for NPTEL Lecture on Digital Control Systems</a>
+<a href="https://www.youtube.com/watch?v=liwFN30cFWw&list=PLyqSpQzTE6M99jfnT8Lf_45NAQnNuwNO8&index=26" target="_blank">Click here for NPTEL Lecture on "Design of Full Order Observer", State Space Approach to Control System Analysis and Design.</a>
