@@ -20,6 +20,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/adik.css" rel="stylesheet">
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"></script>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -119,7 +121,7 @@
 
             </div><!--First col under 2nd row end-->
             <div class="col-md-6"><!--2nd col under 2nd row start-->
-                <p class="h1"> <b> Simulation</b> </p>
+                <p class="h1"> <b>Simulation</b> </p>
             </div><!--2nd col under 2nd row end-->
             <div class="col-md-3"><!--3rd col under 2nd row start-->
 
@@ -129,6 +131,7 @@
         
     </div><!--First Container under body tag end-->
     
+   
 	
     <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
       <div class="row"><!--First row under 3rd container start-->
@@ -151,9 +154,14 @@
 					 <li> Click on the 'Run' button to run the selected design. </li><br/>
 					 
 					 <li> Click on the 'Rank' or 'Determinant'  or "Inference' or 'Gain Values' buttons to get the controllability test information and state feedback gain values. </li><br/>
-					 
+					 					 
+					 <li> <b>Note:</b> Enter the initial position value between -10 m to +10 m and enter the initial angle value between -6 &deg; to +6 &deg; (as per the practical experiment point of view). Click on the "Closed Loop Response" button.</li><br/>
+					 					 
 					 <li> Click on the 'Rank' or 'Determinant'  or "Inference' or 'Gain Values' buttons to get the observaility test information and observer gain values. </li><br/>
 					 
+					 <li> <b>Note:</b> Enter the initial position value between -10 m to +10 m (as per the practical experiment point of view). Click on the "State Estimation Response" button.</li><br/>
+					 
+                     <li> Click on 'Download' button to download the plot.</li></br>
 					 					 
 					 <li> Click on 'Clear' button to enter the new values of quantities.</li><br/>
 					  
@@ -264,7 +272,7 @@
 			Pole 1 :  P1 = <input type="number" id="np1" min="-500" value="-1" max="0" step="0.05" style="position:absolute;width:10%" ><br/></br>
 			Pole 2 :  P2 = <input type="number" id="np2" min="-500" value="-2" max="0" step="0.05" style="position:absolute;width:10%" ><br/></br>
 			Pole 3 :  P3 = <input type="number" id="np3" min="-500" value="-3" max="0" step="0.05" style="position:absolute;width:10%" ><br/></br>
-			Pole 4 :  P4 = <input type="number" id="np4" min="-500" value="-4" max="0" step="0.05" style="position:absolute;width:10%" ><br/></br>
+			Pole 4 :  P4 = <input type="number" id="np4" min="-500" value="-4" max="0" step="0.05" style="position:absolute;width:10%" >
 			
 						
 			<p id="Pole_Value1"/>
@@ -276,11 +284,11 @@
             			  
 			
 			</div>
-			<br/>
+			<!-- <br/>
 			
 			
 			
-			<br/>
+			<br/> -->
 			
 			
 			
@@ -303,10 +311,10 @@
 	<div class="col-md-1"></div>
 	</div>-->
 	</div>
-	<div class="row my-5 gy-2">
+	<!-- <div class="row my-5 gy-2">
 	<div class="col-md-12">	</div>
 	<img  src="./images/SS_Pendulum_Cart.png" style="visibility:hidden; width:5%;height:5%" >
-	</div>
+	</div> -->
 <div class="row my-5 gy-2">
 	
 	<div class="col-md-12">	
@@ -316,8 +324,10 @@
     Design
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item"  onclick="test1();">State Feedback Controller</a></li>
-    <li><a class="dropdown-item"  onclick="test2();">Observer</a></li>
+    
+	<li><a class="dropdown-item"  onclick="test1();">State Feedback Controller</a></li>
+	<li><a class="dropdown-item"  onclick="test2();">Observer</a></li>
+    
     </b></br>
   </ul>
 </div>&nbsp;&nbsp;		
@@ -336,7 +346,12 @@
 	<input type="number" id="chktest" value="0" style="visibility:hidden">
 	</div>
 	</br>
-	<div class="row my-5 gy-2">
+	
+			
+					
+			
+			
+			<div class="row my-5 gy-2">
 	
 	<div class="col-md-12">
 	<div   class="img-container">			
@@ -381,11 +396,20 @@
 				
 				<p id="Feedback_gain_Value_K"/>
 				
+				<div id="plotBody2" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
+				</br>
+				<div class="card-title"><b>Simulation: Response of States using State Feedback </b></div><br/>
+				Enter the initial position value (meter):&nbsp;&nbsp;<input type="number" id="initPos" min="-10" max="10" value="0.1" style="width:10%;text-align:center"><br/><br/>
+			    
+				Enter the initial angle value (&theta; &deg;):&nbsp;&nbsp;<input type="number" id="initAngle" min="-6" max="6" value="0" style="width:10%;text-align:center"><br/><br/>
+			    </br>
+				
+				<button class="btn btn-success" id ="plotA" onclick="plotSSM()" style="visibility:hidden">Closed Loop Response</button> <br/><br/>
+				</div>
 			</div>
 			
-			
-			
-			<div id="tfbody4" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
+			<br/>
+	<div id="tfbody4" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
 			<br/>	
 			<span class="card-text "><b>Observability Test</b></span>
 			<!--$$ Q_{o1} = [c_1 \ c_1A \ c_1A^2 \ c_1A^3]^T $$
@@ -413,6 +437,19 @@
 				<span id="C2_charO" style="display:none"></span><br/> -->
 				<span id="Observer_gain_Value_Ke" style="display:none"></span>
 			<br/>
+			
+			<div id="plotBody1" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
+			</br>
+			<div class="card-title"><b>Simulation: State Estimation using Observer </b></div><br/>
+			
+			Enter the initial position value (meter):&nbsp;&nbsp;<input type="number" id="initPosObs" min="-10" max="10" value="0.1" style="width:10%;text-align:center"><br/><br/>
+			<!-- Initial Velocity :&nbsp;&nbsp;<input type="number" value="0" style="width:10%;text-align:center" readonly=readonly><br/></br>
+			Initial Angle :&nbsp;&nbsp;<input type="number" value="0" style="width:10%;text-align:center" readonly=readonly><br/></br>
+			Initial Angular Velocity :&nbsp;&nbsp;<input type="number" value="0" style="width:10%;text-align:center" readonly=readonly><br/></br> -->
+			
+			
+			<button class="btn btn-success" id ="plotB" onclick="plotObs()" style="visibility:hidden">State Estimation Response</button>  <br/><br/>
+			</div>
 				<!--<p id="Obsrl_Test1"/>
 				<p id="Obsrl_Test2"/>
 				<p id="Obsrl_Test3"/>
@@ -426,13 +463,8 @@
            	
 			-->
 										
-			<br/><br/>
+			<!-- <br/><br/> -->
 			</div>
-			
-			
-			
-			<br/>
-	
 	        
 	
 	</div>
@@ -449,16 +481,23 @@
 	 
 			<div class="col-md-12">
 				<!--img id = "0.3fr" src="./images/plant.png" class="img-fluid" style="display:none">-->
-				<div id = "plotbucket" class="content-center " style="display:none; position:relative; border:3px solid white;height:530px;width:823px ">
+				<button type="button" id="exportChart" class="btn btn-primary" onclick="saveImg()" style="display:none;">Download Plot</button>
+				<div id = "plotbucket" class="content-center " style="display:none; position:relative; border:3px solid white;height:1000px;width:1000px ">
 				
 				<!--<button type="button" id="exportChart2" class="btn btn-primary"  style="display:none;position:absolute;top:210%;left:28%;">Download Plot</button>-->
 				
-					<div id="chartContainer1"  style="display:none; position:absolute; height:35%; width:88%;z-index:1 "></div>
-					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-					<div id="chartContainer2"  style="display:none; position:absolute; height:30%; width:88%;z-index:1 "></div>
+					<div id="chartContainer1"  style="display:none; position:absolute; height:25%; width:100%;z-index:1 "></div>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<div id="chartContainer2"  style="display:none; position:absolute; height:25%; width:100%;z-index:1 "></div>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<div id="chartContainer3"  style="display:none; position:absolute; height:25%; width:100%;z-index:1 "></div>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<div id="chartContainer4"  style="display:none; position:absolute; height:25%; width:100%;z-index:1 "></div>
 				
 				</div>
+				
 				<!--<button type="button" id="exportChart" class="btn btn-primary"  >Download Plot</button>-->
+				
 			</div>
 			
 			
